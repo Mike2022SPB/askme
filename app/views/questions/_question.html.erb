@@ -1,6 +1,8 @@
-<div class="mb-sm">
+<% hidden_klass = question.hidden ? "question-hidden" : "question-visible" %>
+<%= content_tag :div, class: ["mb-sm", hidden_klass] do %>
   <%= question.body %>
-</div>
+  <% end %>
+
 
 <div class=" text-sm question-footer">
   <div class="text-grey">
