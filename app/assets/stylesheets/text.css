@@ -22,3 +22,7 @@ body {
 .text-sm {
   font-size: 80%;
 }
+
+.text-grey {
+  color: gray;
+}
