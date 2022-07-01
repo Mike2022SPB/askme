@@ -9,7 +9,10 @@
 </div>
 
 <div class="container mt-sm">
-  <h2 class="title-lg mb">Questions:</h2>
+  <h2 class="title-lg mb">
+    <%= @questions.count %>
+    <%= inclination(@questions.count, "question", "questions") %>
+  </h2>
 </div>
 
 <% @questions.each do |question| %>

@@ -8,7 +8,7 @@
   </div>
 
   <div>
-    <% unless @question.hidden %>
+    <% unless question.hidden %>
       <%= button_to fa_icon("eye-slash"), hide_question_path(question), method: :put, title: "Hide question" %>
     <% end %>
     <%= link_to fa_icon("pencil"), edit_question_path(question), title: "Edit question" %>

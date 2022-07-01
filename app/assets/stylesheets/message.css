@@ -1,0 +1,14 @@
+.message {
+  border: 1px solid gray;
+  padding: 10px 15px;
+}
+
+.message-notice {
+  background-color: lightyellow;
+  border-color: yellowgreen;
+}
+
+.message-alert {
+  background-color: pink;
+  border-color: darkred;
+}
