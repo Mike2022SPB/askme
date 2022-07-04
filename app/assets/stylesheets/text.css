@@ -26,3 +26,7 @@ body {
 .text-grey {
   color: gray;
 }
+
+.text-bold {
+  font-weight: bold;
+}
