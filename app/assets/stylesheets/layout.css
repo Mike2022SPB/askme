@@ -20,7 +20,6 @@ body {
 
 .navbar {
   align-items: center;
-  background-color: darkred;
   color: white;
   display: flex;
   justify-content: space-between;
