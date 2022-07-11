@@ -1,0 +1,12 @@
+<div class="container text-center">
+  <p class="title-sm text-grey">
+    No one has asked this user anything yet.
+  </p>
+
+  <div class="mt-lg mb-lg fa-4x text-light-grey">
+    <%= fa_stacked_icon 'question', base: 'circle-o' %>
+  </div>
+
+  <%= link_to "You can ask a question right now.", new_question_path(user_id: user),
+    class: 'button button-main' %>
+</div>

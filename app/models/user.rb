@@ -9,6 +9,9 @@ class User < ApplicationRecord
   validates :nickname, length: { maximum: 40 }
   validates :nickname, format: { with: /\A[a-zA-Z0-9_]+\Z/}
 
+  has_many :questions, dependent: :delete_all
+  has_many :authored_questions, class_name: "Question", foreign_key: "author_id", dependent: :nullify
+
   def downcase_nickname
     nickname.downcase!
   end
