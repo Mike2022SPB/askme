@@ -1,13 +1,7 @@
 <% hidden_klass = question.hidden ? "question-hidden" : "question-visible" %>
 <%= content_tag :div, class: ["mb-sm", hidden_klass] do %>
   <%= simple_format h(question.body), {}, sanitize: true %>
-    <div class="mt-sm text-sm text-grey">
-      <% if question.author.nil?  %>
-        <%= 'Question created by Anonymous' %>
-      <% else %>
-        <%= link_to "#{question.author.nickname}", user_path(question.author) %>
-      <% end %>
-    </div>
+
   <% end %>
 
   <% if question.answer.present? %>
@@ -15,6 +9,17 @@
       <%= question.answer %>
     </div>
   <% end %>
+
+<p class="mb text-sm text-grey">
+    Question <%= link_to "##{question.id}", question_path(question) %>
+    for user: <%= link_to "@#{question.user.nickname}", user_path(question.user) %>
+      <% if question.author.nil?  %>
+        <%= "created by Anonymous" %>
+      <% else %>
+      <%= "created by: " %>
+        <%= link_to "##{question.author.nickname}", user_path(question.author) %>
+      <% end %>
+</p>
 
 <div class=" text-sm question-footer">
   <div class="text-grey">
