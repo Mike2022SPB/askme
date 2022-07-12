@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       redirect_to root_path, notice: "You have successfully registered!"
     else
       flash.now[:alert] = "You have filled out the registration form incorrectly."
-      
+
       render :new
     end
   end
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
       redirect_to root_path, notice: "Successfully updated!"
     else
       flash.now[:alert] = "Unseccefull update."
-      
+
       render :edit
     end
   end
@@ -52,7 +52,7 @@ class UsersController < ApplicationController
   end
 
   def set_user
-    @user = User.find(params[:id])
+    @user = User.find_by!(nickname: params[:nickname])
   end
 
   def user_params
