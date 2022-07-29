@@ -1,6 +1,6 @@
 <div class="user-box">
   <h2 class="title-lg mt-lg"><%= @user.name %></h2>
-  <a href="<%= user_path(@user) %>">
+  <a href="<%= user_path(@user.nickname) %>">
     <%= image_tag @user.gravatar_url, title: "@#{@user.nickname}", class: "rounded" %>
   </a>
 

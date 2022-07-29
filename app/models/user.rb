@@ -9,6 +9,8 @@ class User < ApplicationRecord
 
   before_validation :downcase_nickname
 
+  before_validation :downcase_email
+
   validates :email, presence: true, uniqueness: true, format: { with: /\A\S+@.+\.\S+\z/ }
 
   validates :nickname, presence: true, uniqueness: true, length: { maximum: 40 }, format: { with: /\A[a-zA-Z0-9_]+\Z/ }
@@ -19,5 +21,9 @@ class User < ApplicationRecord
 
   def downcase_nickname
     nickname&.downcase!
+  end
+
+  def downcase_email
+    email&.downcase!
   end
 end
