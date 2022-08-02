@@ -9,9 +9,9 @@ class QuestionsController < ApplicationController
     @question.author = current_user
 
     if @question.save
-      redirect_to user_path(@question.user.nickname), notice: "Your new question has been created."
+      redirect_to user_path(@question.user), notice: "Your new question has been created."
     else
-      redirect_to user_path(@question.user.nickname), notice: "The question is not correct."
+      redirect_to user_path(@question.user), notice: "The question is not correct."
     end
   end
 
