@@ -15,10 +15,10 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, uniqueness: true, length: { maximum: 40 }, format: { with: /\A[a-zA-Z0-9_]+\Z/ }
 
-  validates :header_color, format: { with: /\A#\h{3}{1,2}\z/ }
+  validates :header_color, format: { with: /\A#[a-f0-9]{6}\z/i }
 
   def to_param
-    nickname
+    email
   end
 
   private

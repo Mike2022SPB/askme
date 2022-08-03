@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
 
     @question.update(questions_params)
 
-    redirect_to user_path(@question.user.nickname), notice: "Your new question has been updated."
+    redirect_to user_path(@question.user), notice: "Your new question has been updated."
   end
 
   def destroy
