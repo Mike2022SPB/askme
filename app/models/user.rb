@@ -17,6 +17,10 @@ class User < ApplicationRecord
 
   validates :header_color, format: { with: /\A#\h{3}{1,2}\z/ }
 
+  def to_param
+    nickname
+  end
+
   private
 
   def downcase_nickname
