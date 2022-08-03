@@ -18,7 +18,7 @@ class User < ApplicationRecord
   validates :header_color, format: { with: /\A#[a-f0-9]{6}\z/i }
 
   def to_param
-    email
+    nickname
   end
 
   private
