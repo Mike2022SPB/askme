@@ -1,12 +1,12 @@
 <% hidden_klass = question.hidden ? "question-hidden" : "question-visible" %>
 <%= content_tag :div, class: ["mb-sm", hidden_klass] do %>
-  <%= simple_format h(question.body), {}, sanitize: true %>
+  <%= simple_format h(render_with_hashtags(question.body)), sanitize: true %>
 
   <% end %>
 
   <% if question.answer.present? %>
     <div class="mb-sm text-dark-red">
-      <%= question.answer %>
+      <%= render_with_hashtags(question.answer) %>
     </div>
   <% end %>
 

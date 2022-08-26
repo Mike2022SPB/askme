@@ -1,0 +1,2 @@
+module QuestionsHashtagsHelper
+end

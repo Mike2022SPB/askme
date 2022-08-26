@@ -7,6 +7,7 @@ class QuestionsController < ApplicationController
 
     @question = Question.new(question_params)
     @question.author = current_user
+    @user = User.find(question_params[:user_id])
 
     if @question.save
       redirect_to user_path(@question.user), notice: "Your new question has been created."
@@ -37,6 +38,7 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.order(created_at: :desc).last(10)
     @users = User.order(created_at: :desc).last(10)
+    @hashtags = Hashtag.all
   end
 
   def new

@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="mt-sm container">
+  <h2 class="title-lg mb">
+    Questions with <%= "##{@hashtag.name}" %>:
+  </h2>
+  <%= link_to 'Hashtags', questions_hashtags_path %>
+</div>
+
+<% @questions.each do |question| %>
+  <div class="mt-sm container">
+    <%= render question %>
+  </div>
+<% end %>
