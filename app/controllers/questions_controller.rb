@@ -30,11 +30,6 @@ class QuestionsController < ApplicationController
     redirect_to user_path(@user), notice: "The question has been deleted."
   end
 
-  def hashtags
-    tag = Tag.find_by(name: params[:name])
-    @questions = tag.questions
-  end
-
   def show
     @question = Question.find(params[:id])
   end
@@ -42,7 +37,6 @@ class QuestionsController < ApplicationController
   def index
     @questions = Question.order(created_at: :desc).last(10)
     @users = User.order(created_at: :desc).last(10)
-    @tags = Tag.all
   end
 
   def new
