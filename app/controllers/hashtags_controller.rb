@@ -1,4 +1,4 @@
-class QuestionsHashtagsController < ApplicationController
+class HashtagsController < ApplicationController
   before_action :set_hashtag
 
   def show
