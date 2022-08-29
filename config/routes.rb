@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   resources :users, param: :nickname, except: %i[index]
 
-  resources :questions_hashtags, param: :name, only: %i[show index]
+  resources :hashtags, param: :name, only: %i[show index]
 end

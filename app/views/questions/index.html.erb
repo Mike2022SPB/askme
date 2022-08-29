@@ -13,7 +13,7 @@
 <% if @hashtags.any? %>
   <div class='container mt-sm'>
     <% @hashtags.each do |hashtag| %>
-      <%= link_to "##{hashtag.name}", questions_hashtag_path(hashtag) %>
+      <%= link_to "##{hashtag.name}", hashtag_path(hashtag) %>
     <% end %>
   </div>
 <% end %>
