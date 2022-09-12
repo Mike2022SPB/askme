@@ -1,24 +1,21 @@
-# README
+# ASKME
+[https://askme-clone-rails.herokuapp.com/](https://askme-clone-rails.herokuapp.com/)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application allows you to ask questions to existing users, answer questions on behalf of the user you created. There is functionality: hashtags (creation, search), Avatars from the Gravatar gem.
 
-Things you may want to cover:
+### To use on your local machine:
+#### To clone the project:
+<code>git clone git@github.com:Mike2022SPB/askme.git</code>
+#### To run on your local machine
+1. <code>cd askme</code>
+2. <code>bundle</code>
+3. <code>rails db:migrate</code>
+4. <code>rails s</code>
 
-* Ruby version
+Technologies:
+1. Ruby on Rails
+2. HTML
+3. CSS
+4. PostgreSQL
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Deployed on [Heroku](https://dashboard.heroku.com/)
