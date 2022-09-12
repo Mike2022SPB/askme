@@ -5,7 +5,7 @@ The application allows you to ask questions to existing users, answer questions 
 
 ### To use on your local machine:
 #### To clone the project:
-<code>git clone git@github.com:Mike2022SPB/askme.git</code>
+<code>git clone git<span></span>@github.com:Mike2022SPB/askme.git</code>
 #### To run on your local machine
 1. <code>cd askme</code>
 2. <code>bundle</code>
